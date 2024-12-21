@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Arab Therapy</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
+  
+</head>
+<body>
+<!-- nav bar bootstrap -->
+ 
+<nav class="navbar">
+    <div class="logo">
+      <img src="logo.svg" alt="عرب ثيرابي">
+    </div>
+    <div class="nav-links">
+      <a href="#" class="login-link">تسجيل الدخول</a>
+      <button class="start-now-btn">ابدأ الآن</button>
+    </div>
+  </nav>
+  
+  <!-- nav end -->
+   
+  <section class="hero-section">
+    <div class="hero-container">
+      <div class="hero-text">
+        <h1>هل تهتم شركتك بدعم نفسية و <br> إنتاجية الموظفين؟<span class="OR">أو </span></h1>
+        <p>انضم للشركات المتقدمة في عنايتها بالموظفين.</p>
+      </div>
+    </div>
+  
+    <div class="info-box">
+      <h2>نقدم أفضل المعايير العالمية بلسان عربي</h2>
+      <p>تم تدريب كافة الاخصائيين والإشراف عليهم من قبل أطباء عرب في المانيا</p>
+      <button   id="openModal" class="cta-btn">اطلب حساب تجريبي</button>
+    </div>
+    
+
+<!-- Modal -->
+<div class="modal" id="trialModal">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h4>أدخل معلوماتك واطلب حساب تجريبي</h4>
+      <span class="close-btn" id="closeModal">&times;</span>
+    </div>
+    <div class="modal-body">
+      <form id="trialForm">
+        <div class="row">
+          <div class="form-group">
+            <label for="firstName">الاسم الأول</label>
+            <input type="text" id="firstName" placeholder="الاسم الأول" required>
+          </div>
+          <div class="form-group">
+            <label for="lastName">الاسم الأخير</label>
+            <input type="text" id="lastName" placeholder="الاسم الأخير" required>
+          </div>
+        </div>
+        <div class="row">
+            <div class="form-group phone-group">
+                <label for="phone">رقم الهاتف</label>
+                <div class="phone-input-wrapper">
+                 
+                  <div class="flag-select" onclick="toggleDropdown()">
+                
+                    <img id="selected-flag" src="Flag_of_Jordan.svg.png" alt="Flag">
+                    <div class="dropdown-arrow"></div>
+                    
+                    <div class="flag-dropdown" id="flagDropdown">
+                        <div class="dropdown-item" onclick="selectFlag('https://upload.wikimedia.org/wikipedia/commons/f/fe/Flag_of_Egypt.svg')">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/f/fe/Flag_of_Egypt.svg" alt="Egypt">
+
+                        </div>
+                       
+                    
+                    </div>
+                </div>
+                  <input type="text" id="phone" placeholder="ادخل رقم الهاتف" required>
+                </div>
+              </div>
+
+           
+          <div class="form-group">
+            <label for="email">البريد الإلكتروني</label>
+            <input type="email" id="email" placeholder="ادخل بريدك الإلكتروني" required>
+          </div>
+          
+        </div>
+        <div class="row">
+            <div class="form-group">
+                <label for="companySize">حجم المؤسسة</label>
+                <select id="companySize" required>
+                  <option value="" disabled selected>اختر حجم الشركة</option>
+                  <option value="small">1-10 موظفين</option>
+                  <option value="medium">11-50 موظف</option>
+                  <option value="large">51-200 موظف</option>
+                  <option value="enterprise">أكثر من 200 موظف</option>
+                </select>
+              </div>
+          <div class="form-group">
+            <label for="companyName">اسم المؤسسة</label>
+            <input type="text" id="companyName" placeholder="ادخل اسم الشركة" required>
+          </div>
+         
+        </div>
+        <div class="form-text">
+            <p>
+              "عرب ثيرابي - Arab Therapy تحتاج إلى معلومات الاتصال التي تقدمها لنا للتواصل معك بشأن منتجاتنا وخدماتنا.
+              يمكنك إلغاء الاشتراك وإيقاف التواصل معنا في أي وقت. للحصول على معلومات حول كيفية إلغاء الاشتراك،
+              بسبب ممارسات الخصوصية لدينا وتعهدنا بحماية خصوصيتك، يرجى مراجعة سياسة الخصوصية الخاصة بنا.
+            </p>
+          </div>
+          <button type="submit" class="submit-btn" disabled id="submitButton">اطلب حساب تجريبي</button>
+          
+      </form>
+    </div>
+  </div>
+</div>
+
+
+  </section>
+ 
+  <!--section 2  -->
+
+  <section class="stats-section">
+    <h2 class="stats-title">
+       
+        <span class="highlight">
+            القلق
+            <img src="word-bg.svg" alt="highlight" class="background-image">
+          </span>
+          من أكثر الاضطرابات النفسية شيوعاً
+        </h2>    </h2>
+    <div class="stats-container">
+      <div class="stat-box">
+        <h3 class="stat-number">301 مليون</h3>
+        <p class="stat-text">مليون شخص حول العالم يعانون من<br> القلق.</p>
+      </div>
+      <div class="stat-box">
+        <h3 class="stat-number">64%</h3>
+        <p class="stat-text">من الأشخاص المصابين بالقلق أو<br> أحد اضطرابات القلق<br> يتعافون بعد تلقي العلاج المناسب.</p>
+      </div>
+      <div class="stat-box">
+        <h3 class="stat-number">25%</h3>
+        <p class="stat-text">يتلقى شخص واحد تقريباً من بين كل<br> 4 أشخاص يعانون من اضطرابات<br> القلق العلاج المناسب.</p>
+      </div>
+      <div class="stat-box">
+        <h3 class="stat-number">58 مليون</h3>
+        <p class="stat-text">طفل تم تشخيصه بالقلق.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- section3 style  -->
+  <section class="tests-section">
+    <h2 class="section-title">اختبارات عرب ثيرابي</h2>
+    <div class="tests-grid">
+      <div class="test-box">
+        <img src="test1.png" alt="اختبار الاكتئاب">
+        <p> اختبار الاكتئاب</p>
+      </div>
+      <div class="test-box">
+        <img src="test2.png" alt="اختبار الاكتئاب بين الأزواج">
+        <p>اختبار الاكتئاب بين الأزواج</p>
+      </div>
+      <div class="test-box">
+        <img src="test3.png" alt="اختبار نفسية عام">
+        <p>اختبار نفسية عام</p>
+      </div>
+      <div class="test-box">
+        <img src="test4.png" alt="اختبار التوتر ">
+        <p> اختبار التوتر</p>
+      </div>
+      <div class="test-box">
+        <img src="test5.png" alt="اختبار الاكتئاب المثالي">
+        <p>اختبار الاكتئاب المثالي</p>
+      </div>
+      <div class="test-box">
+        <img src="test6.png" alt="اختبار الوحدة والخوف">
+        <p> اختبار الوحدة والخوف</p>
+      </div>
+    </div>
+  </section>
+  
+  <!-- footer  -->
+
+  <footer class="footer-section">
+    <div class="footer-links">
+      <a href="#">الرئيسية</a>
+      <a href="#">من نحن</a>
+      <a href="#">أسئلة شائعة</a>
+      <a href="#">سياسة الخصوصية</a>
+      <a href="#">الشروط و الأحكام</a>
+      <a href="#">تواصل معنا</a>
+    </div>
+    <div class="footer-social">
+      <a href="#"><img src="facebook.svg" alt="Facebook"></a>
+      <a href="#"><img src="twitter.svg" alt="Twitter"></a>
+      <a href="#"><img src="instagram.svg" alt="Instagram"></a>
+      <a href="#"><img src="youtube.svg" alt="YouTube"></a>
+    </div>
+  </footer>
+  
+
+
+  <script src="script.js"></script>
+
+</body>
+</html>
